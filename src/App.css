@@ -1,38 +1,121 @@
 .App {
   text-align: center;
+  width:75%;
+  height:85vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+  .Car-logo {
+    animation: animation-timing-function infinite 20s linear;
+  }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.navbar {
+  background-color: grey;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height:5vh;
 }
-
-.App-link {
-  color: #61dafb;
+.container {
+  height:90vh;
+  width:auto;
 }
-
+.list-items {
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  margin:2px 3px;
+}
+.list-items a{
+  color:black;
+}
+.list-items a:hover{
+  color:red;
+}
+.sidebar {
+  text-align:center;
+  width:25%;
+  margin-left:75.4%;
+  margin-top:-39.38%;
+  height:85vh;
+}
+.footer {
+  background-color:cyan;
+  height:5vh;
+  margin-top:-3.4%;
+  text-align:center;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+.car{
+  position: absolute;
+  top: 70%;
+  left: 65%;
+  transform: translate(-50%,-100%);
+  transform-origin: 25% bottom;
+  animation: move-car infinite 10s linear;
+  z-index: 100;
+  }
+
+@keyframes start-car {
+0%{
+  transform: translate(-50%,-80%) rotateY(0rad);
+}
+10%{
+  transform: translate(-62.5%,-80%) rotateY(0.314rad);
+}
+20%{
+  transform: translate(-75%,-80%) rotateY(0.628rad); 
+}
+30%{
+  transform:  translate(-87.5%,-80%) rotateY(0.942rad);
+}
+40%{
+  transform: translate(-100%,-80%) rotateY(1.256rad);
+}
+50%{
+  transform: translate(-112.5%,-80%) rotateY(1.571rad); 
+}
+60%{
+  transform:  translate(-125%,-80%) rotateY(1.885rad);
+}
+70%{
+  transform:  translate(-137.5%,-80%) rotateY(2.199rad);
+}
+80%{
+  transform:  translate(-150%,-80%) rotateY(2.513rad);
+}
+90%{
+   transform: translate(-162.5%,-80%) rotateY(2.827rad);
+}
+100%{
+  transform:  translate(-175%,-80%) rotateY(3.142rad);
+}
+}
+@keyframes move-car {
+0%{
+  transform: translate(-50%,-100%)
+}
+25%{
+  transform: translate(-170.5%,-100%) rotate(-10deg)
+}
+50%{
+  transform: translate(-175%,-100%) rotateY(3.142rad)
+  }
+  75%{
+    transform: translate(-55.5%,-100%) rotateY(3.142rad) rotate(-10deg)
+  }
+  100%{
+    transform: translate(-50%,-100%) 
   }
 }
